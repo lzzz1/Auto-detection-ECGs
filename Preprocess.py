@@ -15,7 +15,7 @@ import numpy as np
 import random
 
 #The path for orginal raw dataset (.mat file)
-path='F:/Training_WFDB/'
+path='/Data/'
 FileNames=os.listdir(path)
 Record_set=[]
 
@@ -68,4 +68,4 @@ for i in Record_set:
     Sig_set_filted.append(frame_res)
 
 Sig_set_filted=np.asarray(Sig_set_filted)
-np.save(r'F:\CPSC_2020\Dataset_AF.npy',Sig_set_filted)
+np.save(r'\Input_set\Dataset_AF.npy',Sig_set_filted)
