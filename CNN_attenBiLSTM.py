@@ -24,8 +24,8 @@ from sklearn.model_selection import StratifiedKFold
 from keras.initializers import he_normal
 
 #
-dataset1=np.load(r'/content/drive/My Drive/challenge_2020_DNN/Dataset_PAC.npy')
-dataset2=np.load(r'/content/drive/My Drive/challenge_2020_DNN/Dataset_NonPAC.npy')
+dataset1=np.load(r'/Input_set/Dataset_PAC.npy')
+dataset2=np.load(r'/Input_set/Dataset_NonPAC.npy')
 
 
 dataset_inp=np.vstack((dataset1,dataset2))
@@ -98,5 +98,5 @@ model.fit(X_train2, y_train2,
 y_pre=model.predict_proba(X_test)
 
 
-np.save(r'/content/drive/My Drive/challenge_2020_DNN/y_prepac2.npy',y_pre)
-np.save(r'/content/drive/My Drive/challenge_2020_DNN/y_testpac2.npy',y_test)
+np.save(r'/result/y_prepac2.npy',y_pre)
+np.save(r'/result/y_testpac2.npy',y_test)
